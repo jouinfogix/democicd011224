@@ -35,5 +35,6 @@ export class DemoawspipelineStack extends cdk.Stack {
       env: { account: '051704478360', region: 'us-east-1' }
     }));
 
+    prodStage.addPost(new ManualApprovalStep('approval'));
   }
 }
